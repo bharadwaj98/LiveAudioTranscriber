@@ -55,7 +55,7 @@ const SavedTranscripts = () => {
 
         if (authTest) {
             setLoading(true)
-            fetchTranscripts(authTest.user.uid).then((response) => {
+            fetchTranscripts(authTest?.user?.uid).then((response) => {
                 let categoryArr = []
                 let finalData = response.map((doc) => {
                     let category = []
