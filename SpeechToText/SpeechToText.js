@@ -141,7 +141,7 @@ export const SpeechToText = ({ username }) => {
             <Button variant="outlined" onClick={() => handleClickOpen()}>Save your transcript</Button>
           )
         }
-        {open && transcript && <SaveDialog open={open} setOpen={setOpen} transcript={transcript} categories={categories} uid={auth?.uid || ''} />}
+        {open && transcript && <SaveDialog open={open} setOpen={setOpen} transcript={transcript} categories={categories} uid={auth?.user?.uid || ''} />}
       </Grid>
       <Grid container item direction='column' justifyContent='center' justifySelf='center' alingItems='center' mt='5%'>
         <Typography justifyContent='center' justifySelf='center' alignSelf='center'>{toggleMessage ? message : ''}</Typography>
